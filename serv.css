@@ -1,0 +1,1233 @@
+
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background-color: #f4f8fb;
+    color: #183b56;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 80px;
+    background-color: #183b56;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 30px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   NAV LINKS
+===================================== */
+
+#navLinks {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex: 1;
+
+    margin: 0;
+    padding: 0;
+}
+
+#navLinks li {
+    list-style: none;
+}
+
+#navLinks a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    padding: 10px 13px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+#navLinks a:hover {
+    color: #ff9800;
+
+    background-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+#navLinks a.active {
+    color: #ff9800;
+
+    font-weight: bold;
+
+    background-color:
+        rgba(255, 152, 0, 0.12);
+}
+
+
+/* =====================================
+   NAV BUTTONS
+===================================== */
+
+.nav-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =====================================
+   DARK MODE BUTTON
+===================================== */
+
+#darkModeBtn {
+    width: 43px;
+    height: 43px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color:
+        rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+    background-color: #ff9800;
+
+    transform:
+        rotate(15deg)
+        scale(1.08);
+}
+
+
+/* =====================================
+   LANGUAGE BUTTON
+===================================== */
+
+#languageBtn {
+    min-width: 52px;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ff9800;
+
+    border-radius: 20px;
+
+    background-color: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#languageBtn:hover {
+    background-color: #ff9800;
+
+    color: #183b56;
+}
+
+
+/* =====================================
+   SERVICES HEADER
+===================================== */
+
+.services-header {
+    text-align: center;
+
+    padding: 75px 20px 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #183b56,
+            #28749c
+        );
+
+    color: white;
+}
+
+.services-header h1 {
+    font-size: 46px;
+
+    margin-bottom: 18px;
+
+    color: #ffb13b;
+}
+
+.services-header p {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #eaf4fa;
+}
+
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.search-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+}
+
+.search-section h2 {
+    color: #183b56;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    width: min(90%, 600px);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.search-box input {
+    flex: 1;
+
+    height: 45px;
+
+    padding: 0 18px;
+
+    border: 1px solid #d5e0e7;
+    border-radius: 25px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #183b56;
+
+    background-color: white;
+
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #ff9800;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 152, 0, 0.2);
+}
+
+.search-box input::placeholder {
+    color: #8797a1;
+}
+
+.search-box button {
+    height: 45px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #ff9800;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #e68900;
+
+    transform: translateY(-2px);
+}
+
+#searchResult {
+    min-height: 22px;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #28749c;
+}
+
+
+/* =====================================
+   SERVICES SECTION
+===================================== */
+
+.services-section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        20px
+        30px
+        80px;
+}
+
+
+/* =====================================
+   FILTER
+===================================== */
+
+.services-filter {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    border: 2px solid #ff9800;
+
+    background-color: white;
+
+    color: #183b56;
+
+    padding:
+        10px
+        22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #ff9800;
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================
+   SERVICES GRID
+===================================== */
+
+.services-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================
+   SERVICE CARD
+===================================== */
+
+.service-card {
+    background-color: white;
+
+    border-radius: 18px;
+
+    padding:
+        32px
+        25px;
+
+    text-align: center;
+
+    border: 1px solid #e3edf2;
+
+    border-top:
+        5px solid #ff9800;
+
+    box-shadow:
+        0 8px 25px
+        rgba(24, 59, 86, 0.08);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(24, 59, 86, 0.15);
+}
+
+
+/* =====================================
+   SERVICE ICON
+===================================== */
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+
+    margin:
+        0 auto
+        20px;
+
+    border-radius: 50%;
+
+    background-color:
+        rgba(255, 152, 0, 0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.service-card h3 {
+    color: #183b56;
+
+    font-size: 21px;
+
+    margin-bottom: 14px;
+}
+
+.service-card p {
+    color: #61717d;
+
+    line-height: 1.8;
+
+    min-height: 58px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   SERVICE BUTTON
+===================================== */
+
+.service-btn {
+    border: none;
+
+    background-color: #183b56;
+
+    color: white;
+
+    padding:
+        11px
+        23px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.service-btn:hover {
+    background-color: #ff9800;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================
+   MODAL
+===================================== */
+
+.service-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background-color:
+        rgba(10, 35, 50, 0.75);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 3000;
+}
+
+.service-modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.service-modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    color: #183b56;
+
+    padding: 45px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    transform:
+        translateY(30px)
+        scale(0.95);
+
+    transition: 0.3s;
+}
+
+.service-modal.show
+.service-modal-content {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =====================================
+   CLOSE BUTTON
+===================================== */
+
+.close-service {
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #ff9800;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 19px;
+
+    transition: 0.3s;
+}
+
+.close-service:hover {
+    transform:
+        rotate(90deg);
+
+    background-color:
+        #e68900;
+}
+
+
+/* =====================================
+   MODAL CONTENT
+===================================== */
+
+.modal-icon {
+    width: 85px;
+    height: 85px;
+
+    margin:
+        0 auto
+        18px;
+
+    border-radius: 50%;
+
+    background-color:
+        rgba(255, 152, 0, 0.13);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 42px;
+}
+
+.service-modal-content h2 {
+    color: #183b56;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.service-modal-content > p {
+    color: #657783;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   MODAL DETAILS
+===================================== */
+
+.modal-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    text-align: right;
+}
+
+.modal-detail {
+    background-color: #f4f8fb;
+
+    border-right:
+        4px solid #ff9800;
+
+    padding:
+        13px
+        16px;
+
+    border-radius: 8px;
+
+    color: #183b56;
+
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+.modal-detail:hover {
+    transform:
+        translateX(-4px);
+
+    background-color:
+        #edf5f9;
+}
+
+
+/* =====================================
+   NO RESULTS
+===================================== */
+
+.no-results {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding:
+        50px
+        20px;
+
+    color: #657783;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #183b56;
+
+    color: white;
+
+    text-align: center;
+
+    padding:
+        45px
+        20px
+        25px;
+
+    line-height: 2;
+}
+
+footer h3 {
+    color: #ffb13b;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #dce8ee;
+
+    margin: 5px;
+}
+
+
+/* =====================================
+   FOOTER LINKS
+===================================== */
+
+.footer-links {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+.footer-links h4 {
+    color: white;
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+#footerLinks {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+#footerLinks li {
+    list-style: none;
+}
+
+#footerLinks a {
+    color: #dce8ee;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+#footerLinks a:hover {
+    color: #ffb13b;
+}
+
+.copyright {
+    margin-top: 25px !important;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =====================================
+   BACK TO TOP
+===================================== */
+
+#backToTop {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #ff9800;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #e68900;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+body.dark-mode {
+    background-color: #101d26;
+
+    color: white;
+}
+
+body.dark-mode .navbar {
+    background-color: #102f43;
+}
+
+body.dark-mode .services-header {
+    background:
+        linear-gradient(
+            135deg,
+            #102f43,
+            #1d5875
+        );
+}
+
+body.dark-mode .services-section {
+    background-color: #101d26;
+}
+
+body.dark-mode .search-section {
+    background-color: #1d303d;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .search-section h2 {
+    color: white;
+}
+
+body.dark-mode .search-box input {
+    background-color: #142530;
+
+    color: white;
+
+    border-color: #395363;
+}
+
+body.dark-mode .search-box input::placeholder {
+    color: #aaa;
+}
+
+body.dark-mode .filter-btn {
+    background-color: #1d303d;
+
+    color: white;
+}
+
+body.dark-mode .filter-btn:hover,
+body.dark-mode .filter-btn.active {
+    background-color: #ff9800;
+
+    color: white;
+}
+
+body.dark-mode .service-card {
+    background-color: #1d303d;
+
+    border-color: #304957;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .service-card h3 {
+    color: white;
+}
+
+body.dark-mode .service-card p {
+    color: #c7d2d8;
+}
+
+body.dark-mode .service-btn {
+    background-color: #ff9800;
+
+    color: white;
+}
+
+body.dark-mode .service-modal-content {
+    background-color: #1d303d;
+
+    color: white;
+}
+
+body.dark-mode .service-modal-content h2 {
+    color: #ffb13b;
+}
+
+body.dark-mode .service-modal-content > p {
+    color: #c7d2d8;
+}
+
+body.dark-mode .modal-detail {
+    background-color: #142530;
+
+    color: #e5edf1;
+}
+
+body.dark-mode .modal-detail:hover {
+    background-color: #1b3544;
+}
+
+body.dark-mode footer {
+    background-color: #102f43;
+}
+
+body.dark-mode .footer-links a {
+    color: #dce8ee;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+    #navLinks {
+        order: 3;
+
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    .services-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================
+   TABLET / MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 20px;
+    }
+
+    #navLinks {
+        flex-direction: row;
+
+        justify-content: center;
+    }
+
+    #navLinks a {
+        font-size: 13px;
+
+        padding: 8px;
+    }
+
+
+    /* SERVICES HEADER */
+
+    .services-header {
+        padding:
+            60px
+            20px
+            50px;
+    }
+
+    .services-header h1 {
+        font-size: 36px;
+    }
+
+    .services-header p {
+        font-size: 16px;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+        width: 90%;
+
+        margin:
+            -25px
+            auto
+            30px;
+
+        padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: row;
+
+        gap: 6px;
+    }
+
+    .search-box input {
+        width: auto;
+
+        flex: 1;
+
+        height: 42px;
+    }
+
+    .search-box button {
+        width: auto;
+
+        height: 42px;
+
+        padding:
+            0
+            16px;
+    }
+
+
+    /* SERVICES */
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* MODAL */
+
+    .service-modal-content {
+        padding:
+            40px
+            25px;
+    }
+}
+
+
+/* =====================================
+   SMALL PHONE
+===================================== */
+
+@media (max-width: 450px) {
+
+    #navLinks a {
+        font-size: 12px;
+
+        padding: 6px;
+    }
+
+    .services-section {
+        padding:
+            15px
+            15px
+            60px;
+    }
+
+    .services-header h1 {
+        font-size: 30px;
+    }
+
+    .services-header p {
+        font-size: 15px;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+        width: 92%;
+
+        padding:
+            18px
+            15px;
+    }
+
+    .search-section h2 {
+        font-size: 19px;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    /* FILTER */
+
+    .filter-btn {
+        padding:
+            9px
+            15px;
+
+        font-size: 13px;
+    }
+
+
+    /* BACK TO TOP */
+
+    #backToTop {
+        width: 45px;
+
+        height: 45px;
+
+        right: 15px;
+
+        bottom: 15px;
+    }
+}
